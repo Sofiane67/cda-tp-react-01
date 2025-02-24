@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - Pizzeria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Administration des Pizzas</h1>
+        <p>Gérez le menu de la pizzeria</p>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Menu</a></li>
+                <li><a href="admin.html">Administration</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+        <section class="pizza-form">
+            <h2>Ajouter / Modifier une Pizza</h2>
+            <form id="pizzaForm">
+                <input type="hidden" id="pizzaIndex">
+                <input type="text" id="pizzaName" placeholder="Nom de la pizza" required>
+                <textarea id="pizzaDescription" placeholder="Description" required></textarea>
+                <input type="decimal" id="pizzaPrice" placeholder="Prix (€)" required>
+                <input type="text" id="pizzaImage" placeholder="URL de l'image" required>
+                <button type="submit" id="submitBtn">Ajouter Pizza</button>
+            </form>
+        </section>
+
+        <section class="pizza-list">
+            <h2>Liste des Pizzas</h2>
+            <ul id="pizzaList"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Pizzeria - Tous droits réservés</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>

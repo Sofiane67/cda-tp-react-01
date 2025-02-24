@@ -24,6 +24,38 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #b71c1c; /* Couleur légèrement plus foncée pour distinguer */
+    padding: 0.75rem 0;
+    margin-top: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover {
+    color: #ffccbc;
+}
+
 .main-container {
     display: flex;
     justify-content: center;
@@ -90,6 +122,12 @@ header h1 {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
+}
+
+.remove-item{
+    background-color: #d32f2f;
+    color: white;
+    max-width: 50px;;
 }
 
 .btn.info {
@@ -300,6 +338,80 @@ footer {
     text-align: right;
     margin-top: 1rem;
 }
+
+.admin-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.pizza-form {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.pizza-form input,
+.pizza-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pizza-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pizza-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pizza-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pizza-list img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.pizza-list button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pizza-list .edit {
+    background-color: #ff9800;
+    color: white;
+}
+
+.pizza-list .delete {
+    background-color: #d32f2f;
+    color: white;
+}
+
 
 @media (max-width: 768px) {
     header h1 {

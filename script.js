@@ -31,18 +31,27 @@ document.addEventListener("DOMContentLoaded", () => {
         cartItemsContainer.innerHTML = '';
         let total = 0;
 
-        cart.forEach(item => {
+        cart.forEach((item, index) => {
             const cartItem = document.createElement('div');
             cartItem.classList.add('cart-item');
             cartItem.innerHTML = `
                 <span class="cart-item-title">${item.title} x ${item.quantity}</span>
                 <span>${(item.quantity * item.price).toFixed(2)} €</span>
+                <button class="btn remove-item" data-index=${index}>x</button>
             `;
             cartItemsContainer.appendChild(cartItem);
             total += item.quantity * item.price;
         });
 
         cartTotalElement.textContent = `Total : ${total.toFixed(2)} €`;
+
+        document.querySelectorAll('.remove-item').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const index = event.target.dataset.index;
+                cart.splice(index, 1);
+                updateCart();
+            });
+        });
     };
 
     const showModal = (pizzaCard) => {
